@@ -1,0 +1,7 @@
+tls:
+  options:
+    default:
+      clientAuth:
+        clientAuthType: RequireAndVerifyClientCert
+        caFiles:
+          - "/public_certs/admin-clients-ca.crt"

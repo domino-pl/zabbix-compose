@@ -1,0 +1,10 @@
+http:
+  middlewares:
+    admin-basicauth:
+      basicAuth:
+        # May be generated with "../scripts/generate_basicauth.sh"
+        users:
+          # Example: user "dev" with password "1234"
+          # - "dev:$apr1$B7NPDW8l$P/qwsXOj7CP5yqSOwwTg60"
+        realm: "Secure Area"
+        removeHeader: true

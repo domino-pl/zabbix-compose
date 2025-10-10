@@ -1,0 +1,10 @@
+http:
+  services:
+    zabbix-web:
+      loadBalancer:
+        servers:
+          - url: "http://zabbix-web:8080"
+    phpmyadmin:
+      loadBalancer:
+        servers:
+          - url: "http://phpmyadmin:80"

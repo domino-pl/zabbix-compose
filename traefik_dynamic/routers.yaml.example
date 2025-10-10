@@ -1,0 +1,22 @@
+http:
+  routers:
+    zabbix-web:
+      rule: "Host(`%your_domain%`)"
+      entryPoints: [ websecure ]
+      tls:
+        certResolver: ""
+      service: zabbix-web
+    phpmyadmin:
+      rule: "Host(`phpmyadmin.%your_domain%`)"
+      entryPoints: [ websecure ]
+      tls:
+        certResolver: ""
+      service: phpmyadmin
+    traefik:
+      rule: "Host(`traefik.%your_domain%`)"
+      entryPoints: [ websecure ]
+      tls:
+        certResolver: ""
+      middlewares:
+        - admin-basicauth
+      service: api@internal
