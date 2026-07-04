@@ -12,7 +12,7 @@ services:
   mariadb:
     hostname: "mariadb"
     logging: *default-logging
-    image: mariadb:11.4
+    image: mariadb:12.8
     stop_grace_period: 5m
     restart: unless-stopped
     environment:
